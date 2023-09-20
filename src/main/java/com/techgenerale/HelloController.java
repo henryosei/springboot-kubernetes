@@ -12,13 +12,13 @@ public class HelloController {
     @GetMapping("/hello")
     public GreetRecord hello(){
         List<Company> companyList=new ArrayList<>();
-        companyList.add(new Company("Bank of Ghana"));
-        companyList.add(new Company("GDPC"));
-        companyList.add(new Company("Ministry of Finance"));
-        return new GreetRecord(new People("Pearl Esua-Mensah"),List.of(""));
+        companyList.add(new Company("LSI"));
+        companyList.add(new Company("UTRAK"));
+        companyList.add(new Company("Sensio "));
+        return new GreetRecord(new People("CEI"),List.of(""));
     }
 
-    record GreetRecord(People people,List<Company> companies){}
+    record GreetRecord(People people,List<String> companies){}
     record Company(String name){}
     record People(String name){}
 }
